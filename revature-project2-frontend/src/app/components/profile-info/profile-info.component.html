@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://i3.cpcache.com/merchandise/630_750x750_Front_Color-White.jpg?AttributeValue=NA&c=False&region={%22name%22:%22FrontCenter%22,%22width%22:5.46,%22height%22:5.46,%22alignment%22:%22MiddleCenter%22,%22orientation%22:0,%22dpi%22:200,%22crop_x%22:7,%22crop_y%22:0,%22crop_h%22:1092,%22crop_w%22:1085,%22scale%22:0.39,%22template%22:{%22id%22:83846987,%22params%22:{}}}&cid=PUartJBjiF%2Fyg4FdKqiggQ%3D%3D+%7C%7C+DTyEfntqB3ljKqX2fzYyew%3D%3D&ProductNo=1019324959">
+                <span class="font-weight-bold">{{ firstName }}</span>
+                <span class="text-black-50">{{ emailId }}</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" [placeholder]="firstName" value="" disabled></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" [placeholder]="lastName" disabled></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" [placeholder]="emailId" value="" disabled></div>
+                    <div class="col-md-12"><label class="labels">Age</label><input type="text" class="form-control" [placeholder]="age" value="" disabled></div>
+                    <div class="col-md-12"><label class="labels">Driver License</label><input type="text" class="form-control" [placeholder]="driverLicense" value="" disabled></div>
+                    <div class="col-md-12"><label class="labels">Profile ID</label><input type="text" class="form-control" [placeholder]="profileID" value="" disabled></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Update Password</span><span class="border px-3 p-1 add-experience" (click)="updatePassword()"><i class="fa fa-plus"></i>&nbsp;Update</span></div><br>
+                <div class="col-md-12"><label class="labels">New Password</label><input type="password" class="form-control" placeholder="" value="" [(ngModel)]="newPasswordOne"></div> <br>
+                <div class="col-md-12"><label class="labels">Confirm Password</label><input type="password" class="form-control" placeholder="" value="" [(ngModel)]="newPasswordTwo"></div><br />
+                <div class="col-md-12">
+                    <div [class]="errorAlertCSSClass" role="alert" *ngIf="errorDispaly">{{ errorMessage }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

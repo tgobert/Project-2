@@ -1,0 +1,295 @@
+<app-navbar></app-navbar>
+<div class="container w-100 mx-auto">
+    <div class="card-header text-center">
+        <h2>Home Page</h2>
+    </div><br>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/volkswagen-passat-a.jpg" id="carImage"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.sedan1.car_make | titlecase}} {{this.sedan1.car_model | titlecase}}
+                        </h3>
+                        <p class="card-text"><b>Year:</b> {{this.sedan1.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.sedan1.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.sedan1.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.sedan1.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$30</p>
+                        <div><button class="center" type="button" (click)="sedanOne()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/volkswagen-passat-m.jpg" id="carImage"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.sedan2.car_make | titlecase}} {{this.sedan2.car_model |
+                            titlecase}}</h3>
+                        <p class="card-text"><b>Year:</b> {{this.sedan2.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.sedan2.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.sedan2.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.sedan2.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$30</p>
+                        <div><button class="center" type="button" (click)="sedanTwo()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/mazda-navajo-a.jpg" id="carImage"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.suv1.car_make | titlecase}} {{this.suv1.car_model | titlecase}}
+                        </h3>
+                        <p class="card-text"><b>Year:</b> {{this.suv1.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.suv1.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.suv1.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.suv1.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$45</p>
+                        <div><button class="center" type="button" (click)="suvOne()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/mazda-navajo-m.jpg" id="carImage"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.suv2.car_make | titlecase}} {{this.suv2.car_model | titlecase}}
+                        </h3>
+                        <p class="card-text"><b>Year:</b> {{this.suv2.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.suv2.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.suv2.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.suv2.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$45</p>
+                        <div><button class="center" type="button" (click)="suvTwo()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">            
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/ford-f150-a.jpg" id="carImage" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.truck1.car_make | titlecase}} {{this.truck1.car_model |
+                            titlecase}}</h3>
+                        <p class="card-text"><b>Year:</b> {{this.truck1.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.truck1.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.truck1.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.truck1.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$50</p>
+                        <div><button class="center" type="button" (click)="truckOne()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/ford-f150-m.jpg" id="carImage" alt="Card image cap">
+                    <div class="card-body">
+                            <h3 class="card-title">{{this.truck2.car_make | titlecase}} {{this.truck2.car_model | titlecase}}</h3>
+                            <p class="card-text"><b>Year:</b> {{this.truck2.car_year}}</p>
+                            <p class="card-text"><b>Class:</b> {{this.truck2.car_class | titlecase}}</p>
+                            <p class="card-text"><b>MPG:</b> {{this.truck2.combination_mpg}}</p>
+                            <p class="card-text"><b>Transmission:</b> {{this.truck2.car_trans | titlecase}}</p>
+                            <p class="card-text"><b>Price Per Day: </b>$50</p>
+                        <div><button class="center" type="button" (click)="truckTwo()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/volkswagen-vanagon-a.jpg" id="carImage"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.van1.car_make | titlecase}} {{this.van1.car_model | titlecase}}</h3>
+                        <p class="card-text"><b>Year:</b> {{this.van1.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.van1.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.van1.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.van1.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$40</p>
+                        <div><button class="center" type="button" (click)="vanOne()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../../assets/volkswagen-vanagon-m.jpg" id="carImage"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">{{this.van2.car_make | titlecase}} {{this.van2.car_model | titlecase}}
+                        </h3>
+                        <p class="card-text"><b>Year:</b> {{this.van2.car_year}}</p>
+                        <p class="card-text"><b>Class:</b> {{this.van2.car_class | titlecase}}</p>
+                        <p class="card-text"><b>MPG:</b> {{this.van2.combination_mpg}}</p>
+                        <p class="card-text"><b>Transmission:</b> {{this.van2.car_trans | titlecase}}</p>
+                        <p class="card-text"><b>Price Per Day: </b>$40</p>
+                        <div><button class="center" type="button" (click)="vanTwo()">RENT ME</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="sedanInfo">
+            <div id="vehicleInfo">
+                <img src="../../../assets/volkswagen-passat-a.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.sedan1.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.sedan1.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.sedan1.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.sedan1.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> {{this.sedan1.car_class | titlecase}}</td>
+                        <td><b>Transmission:</b> {{this.sedan1.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="sedanOne()">RENT ME</button>
+            </div>
+            <div id="vehicleInfo">
+                <img src="../../../assets/volkswagen-passat-m.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.sedan2.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.sedan2.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.sedan2.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.sedan2.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> {{this.sedan2.car_class | titlecase}}</td>
+                        <td><b>Transmission:</b> {{this.sedan2.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="sedanTwo()">RENT ME</button>
+            </div>
+        </div><br>
+
+        <div id="suvInfo">
+            <div id="vehicleInfo">
+                <img src="../../../assets/mazda-navajo-a.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.suv1.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.suv1.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.suv1.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.suv1.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> {{this.suv1.car_class | titlecase}}</td>
+                        <td><b>Transmission:</b> {{this.suv1.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="suvOne()">RENT ME</button>
+            </div>
+            <div id="vehicleInfo">
+                <img src="../../../assets/mazda-navajo-m.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.suv2.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.suv2.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.suv2.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.suv2.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> {{this.suv2.car_class | titlecase}}</td>
+                        <td><b>Transmission:</b> {{this.suv2.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="suvTwo()">RENT ME</button>
+            </div>
+        </div><br>
+
+        <div id="truckInfo">
+            <div id="vehicleInfo">
+                <img src="../../../assets/ford-f150-a.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.truck1.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.truck2.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.truck1.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.truck1.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> Pickup Truck</td>
+                        <td><b>Transmission:</b> {{this.truck1.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="truckOne()">RENT ME</button>
+            </div>
+            <div id="vehicleInfo">
+                <img src="../../../assets/ford-f150-m.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.truck2.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.truck2.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.truck2.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.truck2.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> Pickup Truck</td>
+                        <td><b>Transmission:</b> {{this.truck2.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="truckTwo()">RENT ME</button>
+            </div>
+        </div><br>
+
+        <div id="vanInfo">
+            <div id="vehicleInfo">
+                <img src="../../../assets/volkswagen-vanagon-a.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.van1.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.van1.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.van1.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.van1.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> {{this.van1.car_class | titlecase}}</td>
+                        <td><b>Transmission:</b> {{this.van1.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="vanOne()">RENT ME</button>
+            </div>
+            <div id="vehicleInfo">
+                <img src="../../../assets/volkswagen-vanagon-m.jpg" id="carImage">
+                <table style="width:85%">
+                    <tr>
+                      <td><b>Make:</b> {{this.van2.car_make | titlecase}}</td>
+                      <td><b>Model:</b> {{this.van2.car_model | titlecase}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>MPG:</b> {{this.van2.combination_mpg}}</td>
+                        <td><b>Year:</b> {{this.van2.car_year}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Class:</b> {{this.van2.car_class | titlecase}}</td>
+                        <td><b>Transmission:</b> {{this.van2.car_trans | titlecase}}</td>
+                    </tr>
+                </table>
+                <button class="center" type="button" (click)="vanTwo()">RENT ME</button>
+            </div>
+        </div>
+
+</div> -->

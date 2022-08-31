@@ -1,0 +1,179 @@
+<app-navbar></app-navbar>
+<div class="container mt-5 pt-4">
+    <div class="card shadow">
+        <div class="card-header">
+            <h5 class="card-title text-center fs-4">Rental History</h5>
+        </div>
+        <div class="card-body">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Past Rentals">
+                    <div class="accordion" id="accordionExample" *ngFor="let pRent of pastRentalInfo">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   {{pRent.return_date| datePipe}}
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Model
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.car_model}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Make
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.car_make}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Year
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.car_year}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Class
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.car_class}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Transmission
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.car_trans}}</p>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Start Date
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.rent_date| datePipe}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                End Date
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{pRent.return_date| datePipe}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="pastRentalInfo.length === 0" class="text-center">
+                        <p class="fw-bold">NO DATA</p>
+                    </div>
+                </mat-tab>
+                <mat-tab label="In Progress">
+                    <div class="accordion" id="accordionExample" *ngFor="let cRent of currentRentalInfo">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   {{cRent.return_date| datePipe}}
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Model
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.car_model}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Make
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.car_make}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Year
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.car_year}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Class
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.car_class}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Transmission
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.car_trans}}</p>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Start Date
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.rent_date| datePipe}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                End Date
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{cRent.return_date| datePipe}}</p>
+                                            <!-- <button class="btn btn-primary" (click)="setShowField()">Extend</button>
+                                            <div class="pt-3" *ngIf="showField">
+                                                <input type="date" class="form-control">
+                                                <button class="btn btn-primary mt-2 mx-auto">Submit</button>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="currentRentalInfo.length === 0" class="text-center">
+                        <p class="fw-bold">NO DATA</p>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Future Orders">
+                    <div class="accordion" id="accordionExample" *ngFor="let fRent of futureRentalInfo">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   {{fRent.return_date| datePipe}}
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Model
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{fRent.car_model}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Make
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{fRent.car_make}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Year
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{fRent.car_year}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Class
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{fRent.car_class}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Transmission
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{fRent.car_trans}}</p>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                Start Date
+                                            </h6>
+                                            <p class="card-text fw-bold">{{fRent.rent_date| datePipe}}</p>
+                                            <h6 class="card-subtitle mb-2 text-muted fs-5 text-uppercase">
+                                                End Date
+                                            </h6>
+                                            <p class="card-text text-capitalize fw-bold">{{fRent.return_date| datePipe}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="futureRentalInfo.length === 0" class="text-center">
+                        <p class="fw-bold">NO DATA</p>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

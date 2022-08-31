@@ -1,0 +1,46 @@
+.car-image{
+    width: 29rem;
+    height: 19rem
+}
+
+.gradient1{
+    background-image: linear-gradient(white,#e12f2fa4);
+}
+
+.gradient2{
+    background-image: linear-gradient(#e12f2fa4,lightblue);
+}
+
+.gradient3{
+    background-image: linear-gradient(lightblue,rgba(0, 0, 255, 0.555));
+}
+
+.white-color{
+    background-color: whitesmoke;
+}
+
+.blue-color{
+    background-color: lightblue;
+}
+
+.red-color{
+    background-color: #e12f2fa4;
+}
+
+.dblue-color{
+    color: blue;
+}
+
+.dred-color{
+  color:red  
+}
+
+.gray-color{
+    color:grey;
+}
+
+.icon-size{
+    font-size: 1.5rem;
+}
+
+

@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col">
+        <app-carousel></app-carousel>
+    </div>
+    <div class="col d-flex align-items-center">
+        <div class="container pt-1">
+            <h3 class="text-center mb-2 fst-italic fw-bold">Hey New Runner Welcome To The Family</h3>
+            <div class="alert alert-danger w-75 mx-auto text-center" role="alert" *ngIf="this.errorMessage">
+                {{this.errorMessage}}
+            </div>
+            <div class="row w-100 mx-auto mb-1">
+                <div class="col d-flex justify-content-end">
+                    <div>
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" class="form-control w-100" [(ngModel)]="fname"
+                            required>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-start">
+                    <div>
+                        <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                        <input type="text" class="form-control w-100" [(ngModel)]="lname"
+                            required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-100 mx-auto mb-1">
+                <div class="col d-flex justify-content-end">
+                    <div>
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control w-100" [(ngModel)]="email" required>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-start">
+                    <div>
+                        <label for="exampleInputPassword1" class="form-label">Age</label>
+                        <input type="number" class="form-control w-100" min="0"
+                            [(ngModel)]="age" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-1 w-75 mx-auto">
+                <label for="exampleInputPassword1" class="form-label">Driver License Number</label>
+                <input type="text" class="form-control w-100" [(ngModel)]="dlnum" required>
+            </div>
+
+            <div class="mb-1 w-75 mx-auto">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control w-100" [(ngModel)]="password"
+                    required>
+            </div>
+
+            <div class="mb-3 w-75 mx-auto">
+                <label for="exampleInputPassword1" class="form-label">Confirm Passsword</label>
+                <input type="password" class="form-control w-100" [(ngModel)]="cpassword"
+                    required>
+            </div>
+
+            <div class="mb-1 w-75 mx-auto">
+                <button type="button" class="btn btn-primary w-100 mb-2" (click)="register()">Register</button>
+            </div>
+            <div class="text-center">
+                <h6 class="fs-6 d-inline pe-2">Already Have An Account?</h6>
+                <button routerLink="/login" class="btn btn-outline-primary">Login</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
